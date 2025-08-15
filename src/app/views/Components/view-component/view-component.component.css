@@ -1,0 +1,128 @@
+.estrategias-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.estrategias-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-busqueda {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.form-busqueda label {
+  display: block;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.form-busqueda input {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-busqueda button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 12px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+.card:hover {
+  background-color: #e2e6ea;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-header h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+
+  color: #777;
+}
+
+.card-header span {
+  font-size: 12px;
+  color: #777;
+}
+
+.card-data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.card-data .label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #777;
+}
+
+.card-data .value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+}
+
+.secuencia {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.secuencia span {
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+
+.tag-medium {
+  background-color: #28a745;
+}
+
+.tag-soft {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.tag-hard {
+  background-color: #343a40;
+}

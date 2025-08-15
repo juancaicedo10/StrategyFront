@@ -1,0 +1,43 @@
+<div class="estrategias-container">
+  <h1>Modulo de Estrategias</h1>
+  <form [formGroup]="form" class="form-busqueda">
+    <label for="maxLaps">Max Laps:</label>
+    <input id="maxLaps" formControlName="maxLaps" type="number" />
+    <button (click)="save()">Save</button>
+  </form>
+  <div class="grid-cards">
+    <div class="card" *ngFor="let strategy of strategies">
+      <div class="card-header">
+        <h2>Estrategia</h2>
+        <span>{{ strategy.fecha | date : "short" }}</span>
+      </div>
+      <div class="card-data">
+        <div>
+          <p class="label">Total Vueltas:</p>
+          <p class="value">{{ strategy.totalVueltas }}</p>
+        </div>
+        <div>
+          <p class="label">Consumo Total:</p>
+          <p class="value">{{ strategy.consumoTotal }}</p>
+        </div>
+        <div>
+          <p class="label">Rendimiento:</p>
+          <p class="value">
+            {{ strategy.rendimientoPromedio | number : "1.0-0" }}
+          </p>
+        </div>
+      </div>
+      <div class="secuencia">
+        <span
+          *ngFor="let item of strategy.secuencia"
+          [ngClass]="{
+            'tag-medium': item.tipo === 'Medium',
+            'tag-soft': item.tipo === 'Soft',
+            'tag-hard': item.tipo === 'Hard'
+          }"
+          >{{ item.tipo }}</span
+        >
+      </div>
+    </div>
+  </div>
+</div>
